@@ -35,9 +35,9 @@ jobs:
           path: ~/.npm
           key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-lock.json'') }}'
   docker:
-    runs-on: ubuntu-latest
     permissions: 
        packages: write 
+    runs-on: ubuntu-latest
     needs:
       - unit-testing
     steps:
